@@ -50,8 +50,3 @@ SarasW2/
 
 S3, Lambda, API Gateway, DynamoDB, Amazon Comprehend, SageMaker Autopilot, Amazon Bedrock, Amazon Lex,
 CloudWatch, IAM.
-
-## Status
-
-Infrastructure and code scaffolding for Weeks 4–5. Fill in deployment-specific values (account ID,
-region, endpoint ARNs) before running against a live AWS account.
