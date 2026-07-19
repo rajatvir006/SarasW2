@@ -1,0 +1,21 @@
+{
+  "intentName": "GetFeedbackInsight",
+  "sampleUtterances": [
+    { "utterance": "What are customers saying about {Topic}" },
+    { "utterance": "Show me sentiment for {Topic}" },
+    { "utterance": "What is the CSAT score for {Topic}" }
+  ],
+  "slots": [
+    {
+      "slotName": "Topic",
+      "slotTypeName": "AMAZON.FreeFormInput",
+      "valueElicitationSetting": {
+        "slotConstraint": "Required",
+        "promptSpecification": {
+          "messageGroups": [{ "message": { "plainTextMessage": { "value": "Which topic — delays, baggage, crew, seating?" } } }],
+          "maxRetries": 2
+        }
+      }
+    }
+  ]
+}

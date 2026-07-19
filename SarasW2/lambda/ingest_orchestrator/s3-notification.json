@@ -1,0 +1,15 @@
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "LambdaFunctionArn": "arn:aws:lambda:ap-south-1:123456789012:function:FeedbackIngestOrchestrator",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            { "Name": "prefix", "Value": "raw/" }
+          ]
+        }
+      }
+    }
+  ]
+}

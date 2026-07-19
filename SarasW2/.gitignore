@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+*.zip
+response.json
+.DS_Store
+.aws-sam/

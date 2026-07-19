@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Customer Feedback Intelligence Platform - API layer
+
+Resources:
+  FeedbackApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+
+  GetFeedbackFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: get_feedback.lambda_handler
+      Runtime: python3.12
+      CodeUri: ../lambda/get_feedback/
+      Events:
+        GetFeedback:
+          Type: Api
+          Properties:
+            RestApiId: !Ref FeedbackApi
+            Path: /feedback/{review_id}
+            Method: GET
